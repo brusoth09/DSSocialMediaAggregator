@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import twitter4j.Trend;
 import twitter4j.Trends;
+import twitter4j.TwitterException;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
@@ -47,8 +48,10 @@ public class TwitterConnectorTest{
     }
 
     @Test
-    public void getPlaceTrendsByLanguage(){
+    public void getPlaceTrendsByLanguage() throws TwitterException {
         socialMedia.connect();
-        Trends trends = socialMedia.getTrendsByLocationAndLanguage(1, Language.ENGLISH);
+        for(Trend trend:socialMedia.getTrendsByLocationAndLanguage(1, Language.ENGLISH)){
+            System.out.println(trend.getName());
+        }
     }
 }

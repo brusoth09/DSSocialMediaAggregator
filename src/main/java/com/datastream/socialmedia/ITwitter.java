@@ -1,7 +1,11 @@
 package com.datastream.socialmedia;
 
 import com.datastream.enums.Language;
+import twitter4j.Trend;
 import twitter4j.Trends;
+import twitter4j.TwitterException;
+
+import java.util.List;
 
 /**
  * Created by aburu on 10/20/2016.
@@ -9,5 +13,5 @@ import twitter4j.Trends;
 public interface ITwitter {
     Trends getTrendsByLocationID(int locationID) throws Exception;
 
-    Trends getTrendsByLocationAndLanguage(int i, Language english);
+    List<Trend> getTrendsByLocationAndLanguage(int i, Language english) throws TwitterException;
 }
