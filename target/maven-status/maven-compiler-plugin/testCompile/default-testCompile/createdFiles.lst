@@ -1,0 +1,4 @@
+com\datastream\socialmedia\connector\TwitterConnectorTest.class
+com\datastream\factory\ConfigFactoryTest.class
+com\datastream\factory\SocialMediaFactoryTest.class
+com\datastream\utils\GoogleLanguageDetectorTest.class

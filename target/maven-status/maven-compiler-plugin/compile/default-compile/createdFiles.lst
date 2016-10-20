@@ -1,0 +1,11 @@
+com\datastream\utils\LanguageDetector.class
+com\datastream\socialmedia\SocialMedia.class
+com\datastream\utils\GoogleLanguageDetector.class
+com\datastream\enums\SocialMediaPlatform.class
+com\datastream\factory\ConfigFactory.class
+com\datastream\factory\SocialMediaFactory.class
+com\datastream\utils\Config.class
+com\datastream\enums\Language.class
+com\datastream\utils\TwitterConfig.class
+com\datastream\socialmediaImpl\SMTwitter.class
+com\datastream\socialmedia\ITwitter.class

@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
  *
  */
 public class GoogleLanguageDetectorTest {
-    private static GoogleLanguageDetector googleLanguageDetector;
+    private static GoogleLanguageDetector googleLanguageDetector = new GoogleLanguageDetector();
     public static boolean initialized = false;
 
 
