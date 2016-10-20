@@ -1,7 +1,7 @@
 package com.datastream.utils;
 
 /**
- * Created by aburu on 10/15/2016.
+ * Interface for configuration data container
  */
 public interface Config {
 }

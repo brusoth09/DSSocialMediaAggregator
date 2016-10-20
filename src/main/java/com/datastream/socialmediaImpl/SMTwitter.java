@@ -1,10 +1,8 @@
 package com.datastream.socialmediaImpl;
 
 import com.datastream.socialmedia.SocialMedia;
-import com.datastream.utils.Config;
 import com.datastream.utils.TwitterConfig;
-import twitter4j.Twitter;
-import twitter4j.TwitterFactory;
+import twitter4j.*;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -20,8 +18,12 @@ public class SMTwitter implements SocialMedia{
         this.config = twitter;
     }
 
-    public void connect() {
+    public void connect(){
         twitter = new TwitterFactory(createConfiguration()).getInstance();
+    }
+
+    public Trends getTrendsByLocationID(int locationID) throws TwitterException {
+        return twitter.getPlaceTrends(locationID);
     }
 
     private Configuration createConfiguration(){
@@ -29,8 +31,9 @@ public class SMTwitter implements SocialMedia{
         cb.setDebugEnabled(true)
                 .setOAuthConsumerKey(config.getConsumerKey())
                 .setOAuthConsumerSecret(config.getConsumerSecret())
-                .setOAuthAccessToken(config.getConsumerKey())
+                .setOAuthAccessToken(config.getAccessToken())
                 .setOAuthAccessTokenSecret(config.getAccessTokenSecret());
         return cb.build();
     }
+
 }
