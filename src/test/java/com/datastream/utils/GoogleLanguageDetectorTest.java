@@ -30,5 +30,6 @@ public class GoogleLanguageDetectorTest {
     @Test
     public void testNonEnglishLanguageDetection() throws LangDetectException {
         assertNull(googleLanguageDetector.detectLanguage("靠！我电脑坏了！"));
+
     }
 }
